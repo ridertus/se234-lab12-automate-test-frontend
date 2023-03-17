@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  backend:
+    image: dto80/se234-lab12:latest
+    ports:
+      - "8901:8080"
+    volumes:
+      - type: bind
+        source: /home/ubuntu
+        target: /data
+  frontend:
+    image: ridertus/lab12:latest
+    ports:
+      - "8902:80"
